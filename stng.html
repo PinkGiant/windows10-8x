@@ -1,0 +1,92 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<style>
+ body{background-color: #0156cb;}
+</style>		
+</head>
+<body>
+<div style="color: white;font-size: 24pt;left: 2%;top: 16%;position: fixed;font-family: calibri;font-weight: lighter;" id="main">
+  <a style="color: white;font-size: 41pt;left: 3%;top: 4%;position: fixed;font-family:calibri;font-weight: lighter;">Welcome ,<br> This version is in alpha so no settings are added only user data can changed such as name passwords etc.<br>Are you sure ?<br><button onclick="agreed();" style="width: 10%;height: 6%;background: #00000047;right: 1%;top: 88%;position: fixed;color: white;border: solid 1px #c5b9b9;font-family: calibri;font-size: 14pt;">change user</button>
+</div>
+</body>
+<script>
+function disagreed(){document.getElementById('main').innerHTML='We are really thankful to you.<br>To install this OS.<br>all installation file will be cleared and deleted if you click ok.<br><button onclick="ok();" style="width: 13%;height: 6%;background: #00000047;right: 1%;top: 88%;position: fixed;color: white;border: solid 1px #c5b9b9;font-family: calibri;font-size: 20pt;">OK Delete All</button><button onclick="no();" style="width: 15%;height: 6%;background: #00000047;right: 20%;top: 88%;position: fixed;color: white;border: solid 1px #c5b9b9;font-family: calibri;font-size: 20pt;">No , let me use it</button>';}
+    function agreed(){document.getElementById('main').innerHTML='<iframe id="myImage" style="width: 100%;height: 100%;opacity: 0;"></iframe><iframe id="result" src="" style="width: 100%;height: 100%;position: fixed;top: 0;left: 0;opacity: 0;"></iframe><br><button style="width: 32%;height: 6%;background: transparent;left: -8%;top: 23.6%;position: fixed;color: white;border:none;font-family: calibri;font-size: 30pt;">Name :</button><input id="name" type="search" style="width: 32%;height: 6%;background: #ffffff;left: 13%;top: 24%;position: fixed;color: black;border: solid 4px #a79a9a;font-family: calibri;font-size: 20pt;"><button style="width: 32%;height: 6%;background: transparent;left: -9.5%;top: 33.6%;position: fixed;color: white;border:none;font-family: calibri;font-size: 28pt;">Password :</button><input type="password" id="Password" style="width: 32%;height: 6%;background: #ffffff;left: 13%;top: 34%;position: fixed;color: black;border: solid 4px #a79a9a;font-family: calibri;font-size: 20pt;"><button style="width: 32%;height: 6%;background: transparent;left: -5%;top: 43.6%;position: fixed;color: white;border:none;font-family: calibri;font-size: 28pt;">Confirm Password :</button><input type="password" id="cPassword" style="width: 32%;height: 6%;background: #ffffff;left: 23%;top: 44%;position: fixed;color: black;border: solid 4px #a79a9a;font-family: calibri;font-size: 20pt;"><button onclick="done();" style="width: 9%;height: 7%;background: #000000ad;right: 3%;top: 70%;position: fixed;color: white;border: 1px solid #020000;font-family: calibri;font-size: 28pt;">Done</button><button id="fs" style="width: 32%;height: 6%;background: transparent;left:0%;top: 63%;position: fixed;color: white;border:none;font-family: calibri;font-size: 28pt;">Keep blank if you do not want to set password .</button>        <label class="inputlabel">            <div class="inputdiv" id="inputdiv" style="display:flex;width: 200px;height: 200px;position: fixed;top: 116px;right: 14%;font-family: calibri;font-size: 10pt;background:url(data:image/png;base64,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);background-size:138% 103%;background-repeat:no-repeat;background-position: -35px -1px;align-items:center;"><a style="font-size:20pt;color:black;position:absolute;bottom:40px;left:10px;">Click to change</a></div>          <input id="choose" type="file" onchange="acc();"></label>';}
+ function no (){document.getElementById('main').innerHTML='<a style="color: white;font-size: 41pt;left: 3%;top: 4%;position: fixed;font-family:calibri;font-weight: lighter;">Welcome ,</a>You have successfully installed windows os to your computer through (Samiulation)<br><a style="color:red;">This version is not an official Microsoft Windows 10 OS</a> & only created to get a bit experience of Windows 10 original OS .<br>We would not recommend you to share any of your personal information to us . This os does not have all feature of official Microsoft Windows 10 OS.We made it only for fun . Too many words... lets shorten.<br><br><br><a style="font-size: 34pt;">Are you agree to use it for fun ?</a><button onclick="agreed();" style="width: 10%;height: 6%;background: #00000047;right: 1%;top: 88%;position: fixed;color: white;border: solid 1px #c5b9b9;font-family: calibri;font-size: 20pt;">Accept</button><button onclick="disagreed();" style="width: 10%;height: 6%;background: #00000047;right: 15%;top: 88%;position: fixed;color: white;border: solid 1px #c5b9b9;font-family: calibri;font-size: 20pt;">Decline</button>';}
+    function ok (){document.getElementById('main').innerHTML='All files related to installation were deleted <br>Goodbye , If you wish you can reinstall it <br>You can close now.';}
+     function done(){
+         var un = document.getElementById('name').value;
+         var ps = document.getElementById('Password').value;
+         var cps = document.getElementById('cPassword').value;
+        if(un && ps == cps){
+            localStorage.user_windows_os_by_samir_account_details = "new_user_name ="+un+";";
+            localStorage.pass_for_windows_os_by_samir_account_details = ps;  
+    }
+else{document.getElementById('fs').innerHTML = "fill it please.";}
+}
+</script>
+</html>
+<html><head></head><body>
+    <style>
+        input[type="file"] {
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    .inputdiv {
+        background:rgb(36, 36, 36);
+        border-radius: 10000000px;
+    }
+    
+    .inputlabel {
+        font-family: cursive;
+        display: inline-block;
+        height: 1px;
+        width: 343px;
+        position: fixed;
+        left: 10%;
+        top: 87%;
+    }
+    
+    </style>
+            <script type="text/javascript">
+        function acc() {
+          var aq = document.getElementById('myImage');
+          var selectedLocalVID = document.getElementById("choose").files[0];
+          aq.setAttribute("src", URL.createObjectURL(selectedLocalVID));
+        accc();
+        }
+           function accc(){
+        function toDataURL(url, callback){
+            var xhr = new XMLHttpRequest();
+            xhr.open('get', url);
+            xhr.responseType = 'blob';
+            xhr.onload = function(){
+              var fr = new FileReader();
+            
+              fr.onload = function(){
+                callback(this.result);
+              };
+            
+              fr.readAsDataURL(xhr.response); // async call
+            };
+            
+            xhr.send();
+        }
+        
+        toDataURL(myImage.src, function(dataURL){
+            localStorage.image_of_win_user32x64_1 = dataURL;
+     document.getElementById('inputdiv').style = "display:flex;width: 200px;height: 200px;position: fixed;top: 116px;right: 14%;font-family: calibri;font-size: 10pt;background:url("+dataURL+");background-size:cover;background-repeat:no-repeat;";
+                  var canvas = document.createElement('canvas');
+          canvas.width = myImage.naturalWidth;
+          canvas.height = myImage.naturalHeight;
+          canvas.getContext('d').drawImage(myImage, 0,0);
+        
+          console.log(canvas.toDataURL() === dataURL); // false - not same data
+          
+          });
+               }    
+    </script>
+        </body></html>

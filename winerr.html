@@ -1,0 +1,23 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<style>
+ body{background-color: #0156cb;}
+</style>		
+</head>
+<body>
+
+<a style="color: white;font-size: 141pt;left: 3%;top: 4%;position: fixed;font-family:calibri;font-weight: lighter;">:(</a><br>
+<div style="color: white;font-size: 35pt;left: 12%;top: 43%;position: fixed;font-family: calibri;font-weight: lighter;">
+    Windows insider program run to an error!<br>We are gathering information and restart for you in (<a id="cd">10</a>)s<br><a style="color: white;font-size: 15pt;font-family: Arial, calibri;font-weight: 10;">errorcode:    err_page_fault_in_non_paged_area</a></div>
+</body>
+<input value="10" id="c" style="display: none;">
+<script>
+    setInterval("c();",1000)
+    setInterval("cd();",1)
+    function cd(){
+        var x =document.getElementById('c').value;
+        document.getElementById('cd').innerHTML = x ;}
+    function c(){
+        var x =document.getElementById('c').value;
+        if(x == "0"){window.location.assign('idex.html')}else{document.getElementById('c').value --;}}
+</script>
+</html>

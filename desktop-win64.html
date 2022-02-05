@@ -1,0 +1,286 @@
+<html>
+<head>
+        <style>
+            .brt:hover{background: #15b9fcdb;outline: 2px solid #29bdf8db;}
+            .brt:focus{background: #15b9fcdb;outline: 2px solid #29bdf8db;}
+            .brs:hover{background: #15b9fcdb;outline: 1px solid #29bdf8db;}
+            .brs:focus{background: #15b9fcdb;outline: 1px solid #29bdf8db;}
+            .bts{text-align: left;color: white;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 15pt;background-color: #222121;border: none;width: 100%;height:39.66666666666667px; }
+            .bts:hover{background-color:#332f2f;}
+            #bxx:hover{background:red;}
+            .bts:focus{background-color:#332f2f;transform: scale(0.9);transition: 300ms;outline: none;}
+            .bxbtn:hover{background:#d6d6d6;}
+            #dv{transition: 100ms;}
+.bxbtn{font-size: 25pt;width:50px;height: 40px;border:none;background:white;}
+.bxbtnx{font-size: 25pt;width:50px;height: 40px;border:none;background:white;}
+.bxbtnx:hover{background:red;}
+.on {position: absolute;right:152px;top:-41px;font-size: 25pt;width:50px;height: 40px;border:none;background:white;}
+.off {position: absolute;right:0;top:0;font-size: 25pt;width:50px;height: 40px;border:none;background:white;opacity: 0;}
+.off:hover{opacity: 1;}
+.rsb{background-color:rgb(43, 43, 43);border:none;}
+.rsb:hover{outline: 2px solid #29bdf8db;}
+.cca{height: 100%;width: 3%;border:none;border-bottom:solid 2px #00ffc3; background:transparent;font-family: calibri;font-size: 10px;color: white;}
+.acva{color: black;}
+.windowx{width: 1366px;height:768px;transform: scale(0.3);background: red;position: fixed;top: 0;left: 0;font-family: calibri;font-size: 100pt;color: white;}
+#chrg{height: 100%;background-color: white;position: absolute;top: 1.5px;left: 1px;}
+</style>
+<style id="a1">#strtmnu{z-index: 100;}#taskbar{z-index: 200;}</style>       
+    </head>
+    <body id="body"><ttl id="pag_details" var="desktop_32"></ttl>
+      <div id="wallpaper"></div>
+    <button id="clm_1" class="brt" onclick='startapps("tpc.html","This PC","1");'><div style="position: absolute;bottom: -10px;font-family: calibri;font-weight: lighter;color: white;text-shadow: 0 0 11px #000000;font-size: 11pt;background: transparent;left: 0;right: 0;">This PC</div></button>
+    <button id="clm_2" class="brt" onclick='startapps("rclb.html","Recycle Bin","2");'><div style="position: absolute;bottom: -10px;font-family: calibri;font-weight: lighter;color: white;text-shadow: 0 0 11px #000000;font-size: 11pt;background: transparent;left: 0;right: 0;">Recycle bin</div></button>
+    <button id="clm_3"  class="brt" onclick='startapps("vpl.html","EC Play","3");'><div style="position: absolute;bottom: -10px;font-family: calibri;font-weight: lighter;color: white;text-shadow: 0 0 11px #000000;font-size: 11pt;background: transparent;left: 0;right: 0;">EC Player</div></button>
+    
+   <div id="strtmnu" style="transition:100ms;background:#333333f5;border-top-left-radius:5px;left: 0;border-top-right-radius:5px;border-bottom-right-radius:5px; width:80%;height:77%;position: fixed;">
+        <button id="pwr_btn" onclick="winpowermenuopen();" class="brs">
+                        </button>
+                        <button id="settings_btn" onclick='startapps("stng.html","Settings","4");' class="brs"></button>
+                        <button id="usrnd" class="brs"></button>
+                        
+                        <button class="rsb" id="windows_calender" onclick='startapps("404.html","Calender","5");' ></button>
+                        <button class="rsb" id="windows_mail" onclick='startapps("404.html","Mail","6");' ></button>
+                        <button class="rsb" id="windows_photos" onclick='startapps("404.html","Photos","7");'></button>
+                        <button class="rsb" id="windows_movies" onclick='startapps("404.html","Movies","8");'></button>
+                        <button class="rsb" id="windows_music" onclick='startapps("404.html","Music","9");'></button>
+                        <button class="rsb" id="windows_calc" onclick='startapps("404.html","Calculator","10");'></button>
+                        <button class="rsb" id="windows_maps" onclick='startapps("404.html","Maps","11");'></button>
+                        <button class="rsb" id="lv_go" onclick='startapps("lv.html","Live Wallpaper Manager","12");'></button>
+                        
+                        <div id="power_menu" style="transition:50ms;width: 160px;height: 119px;position: fixed;background: #222121;left: 3px;">
+                            <button class="bts" style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" onclick="slp();">Sleep</button>
+                            <button class="bts" style="position: absolute;top: 39.5px;" onclick="sht();">Shut down</button>
+                            <button class="bts" style="position: absolute;left: 0;right: 0;bottom: 0;" onclick="rs();">Restart</button>
+                            </div>
+</div>
+<div style="width: 100%;height: 40px;background: #262626;position: fixed;bottom: 0;left: 0;right: 0;" id="taskbar">
+    <button id="winbtn" class="brs" onclick="winstartmenuopen();"></button>
+    <div style="width: 83%; height: 100%; background:transparent; position: absolute; top: 0; left: 4%; bottom: 0;" id="taskbarx"></div>
+                        <a id="time" style="font-weight: lighter;position: fixed;bottom: 15px;right: 59px;font-family: calibri;font-size: 17pt;color: white;">**:**</a> <br> <a id="date" style="font-weight: lighter;position: fixed;bottom: 5px;right: 61px;font-family: calibri;font-size: 9pt;color: white;">**-***-**</a>
+                      <style id="chargestyle" ></style>
+                      <div style="background: url('img/1.png');background-size: 100% 100%;width: 45px;height: 45px;position: fixed;bottom: -4px;right: 117px;">
+                          <div style="height: 35%;width: 70%;position: absolute;top:13px;left: 4px;">
+                      <div style="width: 100%;" id="chrg"></div>
+                      <div id="qch"></div>
+                      </div>
+                      </div>
+  </div>
+  <input id="input_of_localv" style="display: none;">
+                    <style id="calrr">#strtmnu{bottom:-800px;opacity:0;}</style>
+                    <style id="calrd">#power_menu{bottom: -138px;opacity:0;}</style>
+<div onclick="acvbb();" id="dv"></div>
+<script src="galt_script.js"></script>
+<script>
+  const k = new Date();
+  var hk = k.getHours();
+  var mk = k.getMonth();
+  var mmk = k.getMinutes();
+  var dk = k.getDate();
+  var yek = k.getFullYear();
+  var pass_for_secure_boot = ((((hk+mk+dk+yek) * 567481).toFixed(0)) + (mmk * 2022));
+  var pass_for_secure_bootx = ((((hk+mk+dk+yek) * 567481).toFixed(0)) + ((mmk-1) * 2022));
+  var pass_for_secure_booty = ((((hk+mk+dk+yek) * 567481).toFixed(0)) + ((mmk-2) * 2022));
+var locate = document.location;
+var checkverify = /secured_boot_key=([^;]+)/i.exec(locate);
+if(!checkverify){document.getElementById("body").innerHTML="Your boot to our system is not secured. it was booted with third parties. For users security we will fall this boot["+pass_for_secure_boot+"]";}{
+ if(checkverify[1] == pass_for_secure_booty){done_works();}
+else if(checkverify[1] == pass_for_secure_bootx){done_works();}
+else if(checkverify[1] == pass_for_secure_boot){done_works();}
+else if(!(checkverify[1] == pass_for_secure_boot)) {document.getElementById("body").innerHTML="Your boot to our system is not secured. it was booted with third parties. For users security we will fall this boot["+checkverify[1]+"]";}
+else if(!(checkverify[1] == pass_for_secure_bootx)) {document.getElementById("body").innerHTML="Your boot to our system is not secured. it was booted with third parties. For users security we will fall this boot["+checkverify[1]+"]";}
+else if(!(checkverify[1] == pass_for_secure_booty)) {document.getElementById("body").innerHTML="Your boot to our system is not secured. it was booted with third parties. For users security we will fall this boot["+checkverify[1]+"]";}
+}
+function done_works() {setInterval(function(){var localv = document.getElementById("input_of_localv").value;if(localv == localStorage.vdolv){}else{setwall();}},1000);}
+function bringmup(which){
+   var a = which.id;
+   var b = "wm="+a+"&";
+   var qsx = /task=([^&]+)/i.exec(a);
+   var allDivs = document.getElementsByTagName("div");
+for(ii = 0; ii < allDivs.length; ii++) { 
+    allDivs[ii].style.zIndex = 0; }
+document.getElementById("windowid="+qsx[1]+"&end").style.zIndex = "1";
+wmaximize(b);
+}function wclose(which){
+   var a = which.id;
+   var qsx = /cls=([^&]+)/i.exec(a);
+   var allDivs = document.getElementsByTagName("div");
+for(ii = 0; ii < allDivs.length; ii++) { 
+    allDivs[ii].style.zIndex = 0; }
+    document.getElementById("windowid="+qsx[1]+"&end").outerHTML = "";
+    document.getElementById("task="+qsx[1]+"&end").outerHTML = "";
+}
+function wmaximize(which){
+   var a = which.id;
+   var qsx = /wm=([^&]+)/i.exec(a);
+   var allDivs = document.getElementsByTagName("div");
+for(ii = 0; ii < allDivs.length; ii++) { 
+    allDivs[ii].style.zIndex = 0; }
+    document.getElementById("windowid="+qsx[1]+"&end").style.transform = "scaleY(0.90)scaleX(1)";
+    document.getElementById("windowid="+qsx[1]+"&end").style.top = "0";
+    document.getElementById("windowid="+qsx[1]+"&end").style.left = "0";
+}
+
+
+
+let i = 1;
+  let body = document.getElementsByTagName("body")[0];
+function startapps(appsrc,apptitle,an){
+  setTimeout('document.getElementById("calrd").innerHTML = "#power_menu{bottom: -138px;opacity:0;}";document.getElementById("calrr").innerHTML = "#strtmnu{z-index:0;bottom:-800px;opacity:0;}";',100);
+if(i < 34){
+const apcon = ["c",this_pc_logo,recycle_bin,ecplayer,settings,wincalender,winmail,winphotos,winmovies,winmusic,wincalc,winmaps,lvgo]
+      let windowx = document.createElement("div");
+      body.appendChild(windowx);
+      windowx.setAttribute("id", "windowid="+i+"&end");
+      windowx.setAttribute("class","windowx");
+      windowx.style = "background: white;transform: scaleY(0.7)scaleX(0.7);height: 768px;width: 1366px;border: solid red 0.1px;";
+      windowx.innerHTML = '<div id="windowid='+i+'&endheader" class="acva" style="height: 42px;width: 100%;position: absolute;top: -42px;background: whitesmoke;text-align: left;font-size: 23pt;font-family: system-ui;">'+apptitle+'</div><button class="bxbtn" style="position: absolute;right: 102px;top:-41px;" onclick="windowminimize()">&minus;</button><button class="bxbtn" style="position: absolute;right:51px;top:-41px;" onclick="wmaximize(this)" id="wm='+i+'&end" >&Square;</button><button class="bxbtnx" id="cls='+i+'&end" style="position: absolute;right: 0;top:-41px;" onclick="wclose(this)" >&Cross;</button><iframe src="'+appsrc+'" id="ag2" style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;width:100%;height:100%;border: none;"></iframe> <button class="on"><svg height="100%" version="1.1" viewBox="0 0 36 36" width="100%" style="background:transparent;"><path d="m 10,16 2,0 0,-4 4,0 0,-2 L 10,10 l 0,6 0,0 z" style="fill:black;"></path><path d="m 20,10 0,2 4,0 0,4 2,0 L 26,10 l -6,0 0,0 z" style="fill:black;"></path><path d="m 24,24 -4,0 0,2 L 26,26 l 0,-6 -2,0 0,4 0,0 z" style="fill:black;"></path><path d="M 12,20 10,20 10,26 l 6,0 0,-2 -4,0 0,-4 0,0 z" style="fill:black;"></path></svg></button>'; 
+      document.getElementById('taskbarx').innerHTML += '<button id="task='+i+'&end" onclick="bringmup(this)" class="cca" style="background: url('+apcon[an]+'); background-size: 80%; background-repeat: no-repeat; background-position: 50% 50%;" ></button>';
+      aquery("windowid="+i+"&end");
+      i++;
+}else{alert("Ram full . No new app will not open until you close some application.")}}
+function aquery(aaa){
+dragElement(document.getElementById(aaa));
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown ;
+  } else {
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+   
+var allDivs = document.getElementsByTagName("div");
+for(ii = 0; ii < allDivs.length; ii++) { 
+    allDivs[ii].style.zIndex = 0; }
+document.getElementById(aaa).style.zIndex = "1";
+
+    e = e || window.event;
+    e.preventDefault();
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    var acd = (elmnt.style.top * -1);
+    var ace = (elmnt.style.left * -1);
+console.log(e.clientX)
+    if(e.clientY < 1 ){elmnt.style.top = (87 * -1)+"px";}
+    if(e.clientX < 1 ){elmnt.style.left = (205 * -1)+"px";}
+    else if(e.clientX > (window.innerWidth -10) ){elmnt.style.left = (-203 * -1)+"px";}
+    
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+  }
+
+  function closeDragElement() {
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+}   function acvbb(){document.getElementById('dv').style = "width: 100%;height: 100%;position: fixed;bottom: -1000px;left: 0;background: black;";}
+        function sht(){
+            setTimeout('winpowermenuopen();',200);
+            setTimeout('winstartmenuopen();',700);
+        setTimeout('window.location.replace("transfer.html?SD")',1200);}
+        function rs(){
+            setTimeout('winpowermenuopen();',200);
+            setTimeout('winstartmenuopen();',700);
+        setTimeout('window.location.replace("transfer.html?RS")',1200);}
+function slp(){
+    setTimeout('winpowermenuopen();',200);
+    setTimeout('document.getElementById("dv").style = "z-index: 1200;width: 100%;height: 100%;position: fixed;top: 0;left: 0;background: black;";',800);}
+
+    function winstartmenuopen(){
+    var a = document.getElementById('calrr').innerHTML;
+    if(a == "#strtmnu{z-index: 200;bottom:40px;opacity:1;}"){document.getElementById('calrr').innerHTML = "#strtmnu{z-index:0;bottom:-800px;opacity:0;}";}
+    else{document.getElementById('calrr').innerHTML = "#strtmnu{z-index: 200;bottom:40px;opacity:1;}";
+  }
+}
+function winappfl(af,aff){
+var onOrOff = document.getElementById(aff).classList.contains('on');
+var afv = document.getElementById(af)
+if (onOrOff) {
+  enterFS(afv);
+  document.getElementById(aff).classList.remove('on');
+  document.getElementById(aff).classList.add('off');}
+  else {exitFS();document.getElementById(aff).classList.remove('off');
+  document.getElementById(aff).classList.add('on');}
+function enterFS(element) {if (element.requestFullscreen) {element.requestFullscreen();}
+
+ else if (element.msRequestFullscreen) {element.msRequestFullscreen();
+ }
+ else if (element.mozRequestFullScreen) {element.mozRequestFullScreen();
+ }
+ else if (element.webkitRequestFullscreen) {element.webkitRequestFullscreen();
+ }
+}
+function exitFS() { if (document.exitFullscreen) {document.exitFullscreen();
+}
+ else if (document.msExitFullscreen) {document.msExitFullscreen();
+ }
+ else if (document.mozCancelFullScreen) {document.mozCancelFullScreen();
+ }
+ else if (document.webkitExitFullscreen) {document.webkitExitFullscreen();
+ }
+}
+}
+
+function winapplicationfl(aa,bb){
+    var a = document.getElementById(aa).innerHTML;
+    if(a == "#"+bb+"{position: fixed;top: 41px;left: 0;right: 0;opacity: 1;}"){document.getElementById(bb).style = "background: white;transform: scaleY(0.7)scaleX(0.7);height: 768px;width: 1366px;"; document.getElementById(aa).innerHTML = "#"+bb+"{position: fixed;top: -51px;left: 0;right: 0;opacity:1;}";}
+    else{document.getElementById(bb).style = "background: white;transform: scaleY(1)scaleX(1);height: 768px;width: 1366px;";document.getElementById(aa).innerHTML = "#"+bb+"{position: fixed;top: 41px;left: 0;right: 0;opacity: 1;}";}
+}
+function winappopen(aa,bb,cc,dd,ff){setTimeout('document.getElementById("calrd").innerHTML = "#power_menu{bottom: -138px;opacity:0;}";document.getElementById("calrr").innerHTML = "#strtmnu{bottom:-800px;opacity:0;}";',100);document.getElementById(bb).style = "background: white;transform: scaleY(0.7)scaleX(0.7);height: 768px;width: 1366px;";document.getElementById(bb+'header').innerHTML = ff;document.getElementById(aa).innerHTML = "#"+bb+"{position: fixed;top: -41px;left: 0;right: 0;opacity:1;}";document.getElementById(cc).setAttribute('src',dd);}
+function winappclose(aa,bb,cc){document.getElementById(bb).style="";document.getElementById(aa).innerHTML = "#"+bb+"{position: fixed;top:1200%;left: 0;right: 0;opacity:0;}";document.getElementById(cc).setAttribute('src',"");}
+
+
+function winpowermenuopen(){
+    var aq = document.getElementById('calrd').innerHTML;
+    if(aq == "#power_menu{bottom: 78px;opacity:1;}"){document.getElementById('calrd').innerHTML = "#power_menu{bottom: -138px;opacity:0;}";}
+    else{document.getElementById('calrd').innerHTML = "#power_menu{bottom: 78px;opacity:1;}";}
+}
+           function dater() {
+    const y = new Date();
+    var year = y.getFullYear();
+    var yrs = (year-2000)
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    var monthss = months[y.getMonth()];
+    var date = y.getDate();
+    const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    var day = days[y.getDay()];
+    
+      
+      var hh = y.getHours();
+      var mm = y.getMinutes();
+      var ss = y.getSeconds();
+    
+      if (hh === 0) {hh = 12;}
+      if (hh > 12) {hh = hh - 12;}
+      if (hh < 10) {hh = "0"+hh;}
+    
+      if(date < 10){var date = "0"+ y.getDate();}else{var date = y.getDate();}
+      if(mm < 10){var mm = "0"+ y.getMinutes();}else{var mm = y.getMinutes();}
+      let timeaa = hh + ":" + mm;
+      let dateaa = date+"-"+monthss+"-"+yrs;
+    
+      document.getElementById("time").innerHTML = timeaa;
+      document.getElementById("date").innerHTML = dateaa;
+    }
+    dater();
+    setInterval("dater()", 1000);
+    adcccc();
+    function adcccc(){
+                       navigator.getBattery().then(function(battery) {
+                          document.querySelector('#chrg').style = "width:"+(battery.level *100)+"%;";
+                       window.requestAnimationFrame(adcccc);})}
+</script>
+    </body></html>

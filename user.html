@@ -1,0 +1,322 @@
+<html onkeydown="dvv();"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<style>
+
+ body{background-color: black;}
+ @keyframes in {0%{opacity:1;}85%{opacity:1;}100%{opacity:0;}}
+ .ring {
+position: absolute;
+top:51.5%;
+margin: auto;
+left:44.4%;
+overflow: visible;
+z-index:100;
+margin-top: 12px;
+}
+
+.ring .indeterminate-ring {
+position: absolute;
+width: 40px;
+height: 40px;
+opacity: 0;
+transform: rotate(225deg);
+-o-animation-name: indeterminate-progress-ring;
+-moz-animation-name: indeterminate-progress-ring;
+-webkit-animation-name: indeterminate-progress-ring;
+animation-name: indeterminate-progress-ring;
+-o-animation-duration: 2s;
+-moz-animation-duration: 2s;
+-webkit-animation-duration: 2s;
+animation-duration: 2s;
+-o-animation-iteration-count: infinite;
+-moz-animation-iteration-count: infinite;
+-webkit-animation-iteration-count: infinite;
+animation-iteration-count: infinite;
+-o-animation-timing-function: linear;
+-moz-animation-timing-function: linear;
+-webkit-animation-timing-function: linear;
+animation-timing-function: linear;
+}
+
+.ring .indeterminate-ring::after {
+/* background-color: #0078D7; */
+background-color: white;
+border-radius: 50%;
+width: 5px;
+height: 5px;
+position: absolute;
+content: '';
+left: 8%;
+top: 8%;
+}
+
+.ring .indeterminate-ring.indicator-1 {
+-o-animation-delay: 0.27s;
+-moz-animation-delay: 0.27s;
+-webkit-animation-delay: 0.27s;
+animation-delay: 0.27s;
+}
+
+.ring .indeterminate-ring.indicator-2 {
+-o-animation-delay: 0.19s;
+-moz-animation-delay: 0.19s;
+-webkit-animation-delay: 0.19s;
+animation-delay: 0.19s;
+}
+
+.ring .indeterminate-ring.indicator-3 {
+-o-animation-delay: 0.05s;
+-moz-animation-delay: 0.05s;
+-webkit-animation-delay: 0.05s;
+animation-delay: 0.05s;
+}
+
+.ring .indeterminate-ring.indicator-4 {
+-o-animation-delay: 0.58s;
+-moz-animation-delay: 0.58s;
+-webkit-animation-delay: 0.58s;
+animation-delay: 0.58s;
+}
+
+.ring .indeterminate-ring.indicator-5 {
+-o-animation-delay: 0.1s;
+-moz-animation-delay: 0.1s;
+-webkit-animation-delay: 0.1s;
+animation-delay: 0.1s;
+}
+
+@-webkit-keyframes indeterminate-progress-ring {
+0% {
+transform: rotate(200deg);
+opacity: 1;
+animation-timing-function: ease-out;
+}
+7% {
+transform: rotate(345deg);
+animation-timing-function: linear;
+}
+30% {
+transform: rotate(455deg);
+animation-timing-function: ease-in-out;
+}
+40% {
+transform: rotate(760deg);
+animation-timing-function: linear;
+}
+70% {
+transform: rotate(895deg);
+opacity: 1;
+animation-timing-function: ease-out;
+}
+73% {
+transform: rotate(955deg);
+animation-timing-function: ease-out;
+opacity: 0;
+}
+74% {
+transform: rotate(985deg);
+opacity: 0;
+}
+100% {
+transform: rotate(1005deg);
+opacity: 0;
+}
+}
+
+@-moz-keyframes indeterminate-progress-ring {
+0% {
+transform: rotate(200deg);
+opacity: 1;
+animation-timing-function: ease-out;
+}
+7% {
+transform: rotate(345deg);
+animation-timing-function: linear;
+}
+30% {
+transform: rotate(455deg);
+animation-timing-function: ease-in-out;
+}
+40% {
+transform: rotate(760deg);
+animation-timing-function: linear;
+}
+70% {
+transform: rotate(895deg);
+opacity: 1;
+animation-timing-function: ease-out;
+}
+73% {
+transform: rotate(955deg);
+animation-timing-function: ease-out;
+opacity: 0;
+}
+74% {
+transform: rotate(985deg);
+opacity: 0;
+}
+100% {
+transform: rotate(1005deg);
+opacity: 0;
+}
+}
+
+@-o-keyframes indeterminate-progress-ring {
+0% {
+transform: rotate(200deg);
+opacity: 1;
+animation-timing-function: ease-out;
+}
+7% {
+transform: rotate(345deg);
+animation-timing-function: linear;
+}
+30% {
+transform: rotate(455deg);
+animation-timing-function: ease-in-out;
+}
+40% {
+transform: rotate(760deg);
+animation-timing-function: linear;
+}
+70% {
+transform: rotate(895deg);
+opacity: 1;
+animation-timing-function: ease-out;
+}
+73% {
+transform: rotate(955deg);
+animation-timing-function: ease-out;
+opacity: 0;
+}
+74% {
+transform: rotate(985deg);
+opacity: 0;
+}
+100% {
+transform: rotate(1005deg);
+opacity: 0;
+}
+}
+
+@keyframes indeterminate-progress-ring {
+0% {
+transform: rotate(200deg);
+opacity: 1;
+animation-timing-function: ease-out;
+}
+7% {
+transform: rotate(345deg);
+animation-timing-function: linear;
+}
+30% {
+transform: rotate(455deg);
+animation-timing-function: ease-in-out;
+}
+40% {
+transform: rotate(760deg);
+animation-timing-function: linear;
+}
+70% {
+transform: rotate(895deg);
+opacity: 1;
+animation-timing-function: ease-out;
+}
+73% {
+transform: rotate(955deg);
+animation-timing-function: ease-out;
+opacity: 0;
+}
+74% {
+transform: rotate(985deg);
+opacity: 0;
+}
+100% {
+transform: rotate(1005deg);
+opacity: 0;
+}
+}
+
+</style>		
+</head>
+<body>
+<div id="cv"  style="transition: 1ms;background:url('img/bg.jpg');width: 100%;height: 100%;background-size: cover;background-repeat: no-repeat; position: fixed;top:0%;left:0%;"></div>
+<div onselect="dvv();" onkeydown="dvv();" onmousewheel="dvv();" oncontextmenu="dvv();return false;" onclick="dvv();" id="vbcv" style="background:transparent;width: 100%;height: 100%;position: fixed;top:0%;left:0%;">    <a id="time" style="    font-weight: lighter;    position: fixed;    top: 74%;    font-family: calibri;    font-size: 80pt;    color: white;">16:07</a> <br> <a id="date" style="    left: 1%;    font-weight: lighter;    position: fixed;    top: 89%;    font-family: calibri;    font-size: 30pt;    color: white;">November</a>  </div></div>
+<img id="caddsv" style="display: none;">
+<div class="ring" style="display: none;" id="ring">
+<div class="indicator-1  indeterminate-ring"></div>
+<div class="indicator-2  indeterminate-ring"></div>
+<div class="indicator-3  indeterminate-ring"></div>
+<div class="indicator-4  indeterminate-ring"></div>
+<div class="indicator-5  indeterminate-ring"></div></div>
+<div id="cbn" style="display:none;">
+<button id="quser" style="width: 100%;height: 6%;background: transparent;left: 2%;top: 50%;position: fixed;color: white;border: none;font-family: calibri;font-size: 28pt;"></button>
+  <button onclick="cdd();" style="width: 10%;height: 6%;background: #00000047;left: 46%;top: 57%;position: fixed;color: white;border: solid 1px #c5b9b9;font-family: calibri;font-size: 20pt;">Sign in</button></div>
+<script>
+function ddacvsna(){document.getElementById('caddsv').style = "display:block;width: 19%;border-radius: 100%;border: solid 2px white;height: 33%;position: fixed;top: 16%;background: url('"+localStorage.image_of_win_user32x64_1+"');background-size: cover;left: 42%;";
+document.getElementById('cbn').style = "display:block;";}
+function dvv(){
+document.getElementById('vbcv').style = "transition: 1s;filter:blur(0px);width: 100%;height: 100%;background-size: cover;background-repeat: no-repeat; position: fixed;top:-200%;left:0%;background:transparent;";
+setTimeout('ddacvsna();' ,400);document.getElementById('cv').style.filter = "blur(30px)";
+}function cdd(){
+  if(!localStorage.pass_for_windows_os_by_samir_account_details){
+    document.getElementById('ring').style = "display:block;";
+  document.getElementsByTagName('body').style = "animation: in 3s linear 1;opacity: 0;";
+  document.getElementById('cbn').innerHTML = '<center style="color: white;font-size: 26pt;left: 48%;top: 53%;position: fixed;font-family:calibri;font-weight: lighter;">Welcome</center>';setTimeout("go_to_desktop();",400);}
+else{
+  document.getElementById('cbn').innerHTML = '<input id="setted" type="password" placeholder="Password" style="width: 23%;height: 6%;background: #ffffff;left: 40%;top: 57%;position: fixed;color:black;border: solid 3px #646464;font-family: calibri;font-size: 20pt;"><button id="quser" style="width: 100%;height: 6%;background: transparent;left: 2%;top: 50%;position: fixed;color: white;border: none;font-family: calibri;font-size: 28pt;"></button><button onclick="okk();" style="width: 4%;height: 6%;background: #00000047;left: 63%;top: 57%;position: fixed;color: white;border: solid 1px #c5b9b9;font-family: calibri;font-size: 20pt;">Ok</button><button id="ccc" style="width:100%;height: 6%;background:transparent;left:0%;top: 67%;position: fixed;color: white;border:none;font-family: calibri;font-size: 20pt;"></button>';
+  var username = /new_user_name =([^;]+)/i.exec(localStorage.user_windows_os_by_samir_account_details);
+document.getElementById('quser').innerHTML= username[1];
+  }  }
+function okk(){
+  var pa = document.getElementById('setted').value;
+  if(pa == localStorage.pass_for_windows_os_by_samir_account_details){    document.getElementById('ring').style = "display:block;";
+  document.getElementsByTagName('body').style = "animation: in 3s linear 1;opacity: 0;";
+  document.getElementById('cbn').innerHTML = '<center style="color: white;font-size: 26pt;left: 48%;top: 53%;position: fixed;font-family:calibri;font-weight: lighter;">Welcome</center>';setTimeout("go_to_desktop();",400);}
+  else{document.getElementById('ccc').innerHTML="Wrong password."}
+}
+const k = new Date();
+  var h = k.getHours();
+  var m = k.getMonth();
+  var mm = k.getMinutes();
+  var d = k.getDate();
+  var ye = k.getFullYear();
+  var pass_for_secure_boot = ((((h+m+d+ye) * 567481).toFixed(0)) + (mm * 2022));
+
+function go_to_desktop() {
+window.location.replace("desktop-win64.html?secured_boot_key="+pass_for_secure_boot+";");
+}
+</script>
+<script type="text/javascript">
+    function d() {
+const y = new Date();
+var year = y.getFullYear();
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+var monthss = months[y.getMonth()];
+var date = y.getDate();
+const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var day = days[y.getDay()];
+
+  
+  var hh = y.getHours();
+  var mm = y.getMinutes();
+  var ss = y.getSeconds();
+
+  if (hh === 0) {hh = 12;}
+  if (hh > 12) {hh = hh - 12;}
+  if (hh < 10) {hh = "0"+hh;}
+
+  if(date < 10){var date = "0"+ y.getDate();}else{var date = y.getDate();}
+  if(mm < 10){var mm = "0"+ y.getMinutes();}else{var mm = y.getMinutes();}
+  let timeaa = hh + ":" + mm;
+  let dateaa = day+" "+" "+","+" "+" "+monthss +" "+ date;
+
+  document.getElementById("time").innerHTML = timeaa;
+  document.getElementById("date").innerHTML = dateaa;
+}
+d();
+setInterval("d()", 1000);
+if(!localStorage.user_windows_os_by_samir_account_details){window.location.replace('hypi.html')}else{
+var username = /new_user_name =([^;]+)/i.exec(localStorage.user_windows_os_by_samir_account_details);
+document.getElementById('quser').innerHTML= username[1];}
+</script>
+</body></html>
