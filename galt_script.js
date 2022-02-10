@@ -16,9 +16,18 @@ var lvgo = "./img/lv.png";
 var ttl = document.getElementById('pag_details').getAttribute('var');
 if(ttl == "desktop_32"){
 function setwall(){
-if(!localStorage.vdolv){document.getElementById('wallpaper').innerHTML = "";document.getElementById('wallpaper').style="background-color:transparent;background-image: url("+windows_wallpaper_default+");background-repeat: no-repeat;background-size:100% 100%;width: 100%;height: 100%;position: fixed;top: 0;left: 0;right: 0;bottom: 0;background-color: black;";}
+if(!localStorage.vdolv){
+    if(!localStorage.pdolv){
+    document.getElementById('wallpaper').innerHTML = "";
+    document.getElementById('wallpaper').style="background-color:transparent;background-image: url("+windows_wallpaper_default+");background-repeat: no-repeat;background-size:100% 100%;width: 100%;height: 100%;position: fixed;top: 0;left: 0;right: 0;bottom: 0;background-color: black;";
+}else{document.getElementById('wallpaper').innerHTML = "";
+document.getElementById('wallpaper').style="background-color:transparent;background-image: url("+localStorage.pdolv+");background-repeat: no-repeat;background-size:100% 100%;width: 100%;height: 100%;position: fixed;top: 0;left: 0;right: 0;bottom: 0;background-color: black;";
+document.getElementById('input_of_localv').value = localStorage.vdolv;
+document.getElementById('input_of_localw').value = localStorage.pdolv;
+}}
 else{document.getElementById('wallpaper').style="width: 100%;height: 100%;position: fixed;top: 0;left: 0;right: 0;bottom: 0;background-color: black;";document.getElementById('wallpaper').innerHTML = "<video autoplay id='walvid' muted loop src='"+localStorage.vdolv+"' style='width:100%;height:100%;position:fixed;right: 0;top:0;' ></video><div style='position:fixed;top:0;left:0;width:100%;height:100%;'>";document.getElementById('walvid').playbackRate = 4;}
 document.getElementById('input_of_localv').value = localStorage.vdolv;
+document.getElementById('input_of_localw').value = localStorage.pdolv;
 }setwall();
 document.getElementById('clm_1').style = "background-color:transparent;background-image: url("+this_pc_logo+");background-size: 91% 91%;background-repeat:no-repeat;border: none;position: fixed;width: 81px;height: 81px;top: 6px;"
 document.getElementById('clm_2').style = "background-color:transparent;background-image: url("+recycle_bin+");background-size: 91% 91%;background-repeat:no-repeat;border: none;position: fixed;width: 81px;height: 81px;top: 102px;"
