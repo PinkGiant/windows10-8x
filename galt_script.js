@@ -25,7 +25,7 @@ document.getElementById('wallpaper').style="background-color:transparent;backgro
 document.getElementById('input_of_localv').value = localStorage.vdolv;
 document.getElementById('input_of_localw').value = localStorage.pdolv;
 }}
-else{document.getElementById('wallpaper').style="width: 100%;height: 100%;position: fixed;top: 0;left: 0;right: 0;bottom: 0;background-color: black;";document.getElementById('wallpaper').innerHTML = "<video autoplay id='walvid' muted loop src='"+localStorage.vdolv+"' style='width:100%;height:100%;position:fixed;right: 0;top:0;' ></video><div style='position:fixed;top:0;left:0;width:100%;height:100%;'>";document.getElementById('walvid').playbackRate = 4;}
+else{document.getElementById('wallpaper').style="width: 100%;height: 100%;position: fixed;top: 0;left: 0;right: 0;bottom: 0;background-color: black;";document.getElementById('wallpaper').innerHTML = "<video autoplay id='walvid' muted loop src='"+localStorage.vdolv+"' style='width:100%;height:100%;position:fixed;right: 0;top:0;object-fit: cover;' ></video><div style='position:fixed;top:0;left:0;width:100%;height:100%;'>";document.getElementById('walvid').playbackRate = 4;}
 document.getElementById('input_of_localv').value = localStorage.vdolv;
 document.getElementById('input_of_localw').value = localStorage.pdolv;
 }setwall();
