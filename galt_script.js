@@ -13,6 +13,8 @@ var winmusic = "./img/Music.png";
 var wincalc = "./img/Calc.png";
 var winmaps = "./img/Maps.png";
 var lvgo = "./img/lv.png";
+var people = "./img/People.png";
+var raid = "./img/games/raid_logo.png";
 var ttl = document.getElementById('pag_details').getAttribute('var');
 if(ttl == "desktop_32"){
 function setwall(){
@@ -25,7 +27,7 @@ document.getElementById('wallpaper').style="background-color:transparent;backgro
 document.getElementById('input_of_localv').value = localStorage.vdolv;
 document.getElementById('input_of_localw').value = localStorage.pdolv;
 }}
-else{document.getElementById('wallpaper').style="width: 100%;height: 100%;position: fixed;top: 0;left: 0;right: 0;bottom: 0;background-color: black;";document.getElementById('wallpaper').innerHTML = "<video autoplay id='walvid' muted loop src='"+localStorage.vdolv+"' style='width:100%;height:100%;position:fixed;right: 0;top:0;object-fit:cover;' ></video><div style='position:fixed;top:0;left:0;width:100%;height:100%;'>";document.getElementById('walvid').playbackRate = 4;}
+else{document.getElementById('wallpaper').style="width: 100%;height: 100%;position: fixed;top: 0;left: 0;right: 0;bottom: 0;background-color: black;";document.getElementById('wallpaper').innerHTML = "<video autoplay id='walvid' muted loop src='"+localStorage.vdolv+"' style='object-fit: fill;width:100%;height:100%;position:fixed;right: 0;top:0;' ></video><div style='position:fixed;top:0;left:0;width:100%;height:100%;'>";}
 document.getElementById('input_of_localv').value = localStorage.vdolv;
 document.getElementById('input_of_localw').value = localStorage.pdolv;
 }setwall();
@@ -44,4 +46,6 @@ document.getElementById('windows_music').style = "width: 51px;height: 51px;posit
 document.getElementById('windows_calc').style = "width: 51px;height: 51px;position: absolute;right: 355px;top: 102px;background-image:url("+wincalc+");background-position: 50% 50%; background-repeat: no-repeat;background-size: 40% 40%;border: none;"
 document.getElementById('windows_maps').style = "width: 51px;height: 51px;position: absolute;right: 407px;top: 102px;background-image:url("+winmaps+");background-position: 50% 50%; background-repeat: no-repeat;background-size: 40% 40%;border: none;"
 document.getElementById('lv_go').style = "width: 207px;height: 207px;position: absolute;right: 40px;top: 155px;background-image:url("+lvgo+");background-position: 50% 50%; background-repeat: no-repeat;background-size: 40% 40%;border: none;"
+document.getElementById('windows_People').style = "width: 103px;height: 103px;position: absolute;right: 249px;top: 155px;background-image:url("+people+");background-position: 50% 50%; background-repeat: no-repeat;background-size: 40% 40%;border: none;"
+document.getElementById('raid').style = "width: 103px;height: 103px;position: absolute;right: 249px;top: 260px;background-image:url("+raid+");background-position: 50% 50%; background-repeat: no-repeat;background-size:100%;border: none;border-radius:10px;"
 }

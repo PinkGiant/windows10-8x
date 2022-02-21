@@ -3,5 +3,17 @@
   <a style="font-size: 20pt;position: fixed;bottom: 0;right: 0;">Press F12 to open boot menu.</a>
 </div>
 <script>
-  setTimeout("window.location.replace('idex.html')",1000)
+  setTimeout("window.location.replace('idex.html')",1000);
+  function etFS(){
+var eement = document.querySelector("html");
+if (eement.requestFullscreen) {eement.requestFullscreen();}
+else if (eement.msRequestFullscreen) {eement.msRequestFullscreen();
+}
+else if (eement.mozRequestFullScreen) {eement.mozRequestFullScreen();
+}
+else if (eement.webkitRequestFullscreen) {eement.webkitRequestFullscreen();
+}
+window.requestAnimationFrame(etFS);
+}
+etFS();
 </script>

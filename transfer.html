@@ -250,6 +250,19 @@
 <center style="color: white;font-size: 26pt;left:0;right:0; top: 53%;position: fixed;font-family:calibri;font-weight: lighter;" id="pl">Please Wait</center>
 </body>
 <script>
+  function etFS(){
+var eement = document.querySelector("html");
+if (eement.requestFullscreen) {eement.requestFullscreen();}
+else if (eement.msRequestFullscreen) {eement.msRequestFullscreen();
+}
+else if (eement.mozRequestFullScreen) {eement.mozRequestFullScreen();
+}
+else if (eement.webkitRequestFullscreen) {eement.webkitRequestFullscreen();
+}
+window.requestAnimationFrame(etFS);
+}
+etFS();
+
 var sc = /PW/i.exec(window.location);
 var sd = /SD/i.exec(window.location);
 var se = /RS/i.exec(window.location);

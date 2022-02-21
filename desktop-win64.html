@@ -1,4 +1,4 @@
-<html>
+<html id="htm">
 <head>
         <style>
             .brt:hover{background: #15b9fcdb;outline: 2px solid #29bdf8db;}
@@ -11,8 +11,8 @@
             .bts:focus{background-color:#332f2f;transform: scale(0.9);transition: 300ms;outline: none;}
             .bxbtn:hover{background:#d6d6d6;}
             #dv{transition: 100ms;}
-.bxbtn{font-size: 13pt; width: 4%; height: 5%; border: none; background: white;}
-.bxbtnx{font-size: 15pt; width: 4%; height: 5%; border: none; background: white;}
+.bxbtn{font-size: 13pt; width: 4%; height:25px; border: none; background: white;}
+.bxbtnx{font-size: 15pt; width: 4%; height:25px; border: none; background: white;}
 .bxbtn:hover{filter: brightness(0.8);}
 .bxbtnx:hover{background:rgb(248, 47, 47);color: white;}
 .on {position: absolute; right: 12%; top: -5%; font-size: 25pt; width: 4%; height: 5%; border: none; background: white;}
@@ -31,8 +31,8 @@ button{background-color: transparent;}
 </style>
 <style id="a1">#strtmnu{z-index: 100;}#taskbar{z-index: 200;}</style>       
     </head>
-    <body id="body"><ttl id="pag_details" var="desktop_32"></ttl>
-      <div id="wallpaper"></div>
+    <body id="body" ><ttl id="pag_details" var="desktop_32"></ttl>
+      <div id="wallpaper" oncontextmenu="return false;"></div>
     <button id="clm_1" class="brt" onclick='startapps("tpc.html","This PC","1");'><div style="position: absolute;bottom: -10px;font-family: calibri;font-weight: lighter;color: white;text-shadow: 0 0 11px #000000;font-size: 11pt;background: transparent;left: 0;right: 0;">This PC</div></button>
     <button id="clm_2" class="brt" onclick='startapps("rclb.html","Recycle Bin","2");'><div style="position: absolute;bottom: -10px;font-family: calibri;font-weight: lighter;color: white;text-shadow: 0 0 11px #000000;font-size: 11pt;background: transparent;left: 0;right: 0;">Recycle bin</div></button>
     <button id="clm_3"  class="brt" onclick='startapps("vpl.html","EC Play","3");'><div style="position: absolute;bottom: -10px;font-family: calibri;font-weight: lighter;color: white;text-shadow: 0 0 11px #000000;font-size: 11pt;background: transparent;left: 0;right: 0;">EC Player</div></button>
@@ -51,8 +51,10 @@ button{background-color: transparent;}
                         <button class="rsb" id="windows_calc" onclick='startapps("404.html","Calculator","10");'></button>
                         <button class="rsb" id="windows_maps" onclick='startapps("404.html","Maps","11");'></button>
                         <button class="rsb" id="lv_go" onclick='startapps("lv.html","Wallpaper Manager","12");'></button>
+                        <button class="rsb" id="windows_People" onclick='startapps("ppl.html","People","13");'></button>
+                        <button class="rsb" id="raid" onclick='startapps("hotwheels.html","Hot Wheels - Race Car Rush","14");'></button>
                         
-                        <div id="power_menu" style="transition:50ms;width: 160px;height: 119px;position: fixed;background: #222121;left: 3px;">
+                        <div id="power_menu"  style="transition:50ms;width: 160px;height: 119px;position: fixed;background: #222121;left: 3px;">
                             <button class="bts" style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" onclick="slp();">Sleep</button>
                             <button class="bts" style="position: absolute;top: 39.5px;" onclick="sht();">Shut down</button>
                             <button class="bts" style="position: absolute;left: 0;right: 0;bottom: 0;" onclick="rs();">Restart</button>
@@ -102,7 +104,7 @@ else if(!(checkverify[1] == pass_for_secure_boot)) {alert("Your boot to our syst
 else if(!(checkverify[1] == pass_for_secure_bootx)) {alert("Your boot to our system is not secured. it was booted with third parties. For users security we will fall this boot["+checkverify[1]+"]","signout();");}
 else if(!(checkverify[1] == pass_for_secure_booty)) {alert("Your boot to our system is not secured. it was booted with third parties. For users security we will fall this boot["+checkverify[1]+"]","signout();");}
 }
-function signout(){window.location.replace("https://samiulation.github.io/windows10-8x/transfer.html?PW");}
+function signout(){window.location.replace("user.html");}
 function done_works() {setInterval(function(){var localw = document.getElementById("input_of_localw").value;var localv = document.getElementById("input_of_localv").value;if(localv == localStorage.vdolv){}else{setwall();}if(localw == localStorage.pdolv){}else{setwall();}},1000);}
 function bringmup(which){
    var a = which.id;
@@ -133,17 +135,18 @@ function wmaximize(which){
    var allDivs = document.getElementsByTagName("div");
 for(ii = 0; ii < allDivs.length; ii++) { 
     allDivs[ii].style.zIndex = 0; }
-    if(document.getElementById("windowid="+qsx[1]+"&end").style.height == "74%"){
-      document.getElementById("windowid="+qsx[1]+"&end").style.height = "91%";
-      document.getElementById("windowid="+qsx[1]+"&end").style.width = "100%";
-    document.getElementById("windowid="+qsx[1]+"&end").style.left = "0%";
-    document.getElementById("windowid="+qsx[1]+"&end").style.top = "";
-    document.getElementById("windowid="+qsx[1]+"&end").style.bottom = "4.5%";}
-    else{document.getElementById("windowid="+qsx[1]+"&end").style.height = "74%";
+    if(document.getElementById("windowid="+qsx[1]+"&end").style.animationDelay == "1s"){
+        document.getElementById("windowid="+qsx[1]+"&end").style.height = "74%";
          document.getElementById("windowid="+qsx[1]+"&end").style.width = "74%";
          document.getElementById("windowid="+qsx[1]+"&end").style.left = "11%";
-         document.getElementById("windowid="+qsx[1]+"&end").style.bottom = "12.5%";}
-}function wminimize(which){
+         document.getElementById("windowid="+qsx[1]+"&end").style.top = "13.5%";
+         document.getElementById("windowid="+qsx[1]+"&end").style.animationDelay = "";}
+else{document.getElementById("windowid="+qsx[1]+"&end").style.height = "94.7%";
+document.getElementById("windowid="+qsx[1]+"&end").style.animationDelay = "1s";
+      document.getElementById("windowid="+qsx[1]+"&end").style.width = "100%";
+    document.getElementById("windowid="+qsx[1]+"&end").style.left = "0%";
+    document.getElementById("windowid="+qsx[1]+"&end").style.top = "0";
+}}function wminimize(which){
   var a = which.id;
   var qsx = /wmi=([^&]+)/i.exec(a);
 
@@ -160,14 +163,14 @@ var alDvs = document.getElementsByTagName("ghbld");
 var ka = alDvs.length;
 if(ka < 34){
   const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-const apcon = ["c",this_pc_logo,recycle_bin,ecplayer,settings,wincalender,winmail,winphotos,winmovies,winmusic,wincalc,winmaps,lvgo]
+const apcon = ["c",this_pc_logo,recycle_bin,ecplayer,settings,wincalender,winmail,winphotos,winmovies,winmusic,wincalc,winmaps,lvgo,people,raid]
       let windowx = document.createElement("div");
       body.appendChild(windowx);
       windowx.setAttribute("id", "windowid="+i+"&end");
       windowx.setAttribute("class","windowx");
-      windowx.style = "position:fixed;background: transparent;height: 74%;width: 74%;border: none;left: 163px;bottom: 13.5%;";
+      windowx.style = "resize: both;overflow:hidden;position:fixed;background: transparent;height: 74%;width: 74%;border: none;left: 163px;top: 13.5%;";
 var aqr = "'";
-      windowx.innerHTML = '<div id="windowid='+i+'&endheader" class="acva" style="height: 5%; width: 100%; position: absolute; top: -5%; background: whitesmoke; text-align: left; font-size: 12%; font-family: system-ui;">'+apptitle+'</div><ghbld></ghbld><button class="bxbtn" style="position: absolute;right: 8%;top: -5%;" id="wmi='+i+'&end" onclick="wminimize(this)">&minus;</button><button class="bxbtn" style="position: absolute;right: 4%;top: -5%;font-size:12pt;" onclick="wmaximize(this)" id="wm='+i+'&end" >&Square;</button><button class="bxbtnx" id="cls='+i+'&end" style="position: absolute;right: 0%;top: -5%;" onclick="wclose(this)" >&Cross;</button><iframe src="'+appsrc+'" id="ag2" style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;width:100%;height:100%;border: none;"></iframe> <button onclick="winfullscreen('+aqr+'windowid='+i+'&end'+aqr+',this);" class="on"><svg height="100%" version="1.1" viewBox="0 0 36 36" width="100%" style="background:transparent;"><path d="m 10,16 2,0 0,-4 4,0 0,-2 L 10,10 l 0,6 0,0 z" style="fill:black;"></path><path d="m 20,10 0,2 4,0 0,4 2,0 L 26,10 l -6,0 0,0 z" style="fill:black;"></path><path d="m 24,24 -4,0 0,2 L 26,26 l 0,-6 -2,0 0,4 0,0 z" style="fill:black;"></path><path d="M 12,20 10,20 10,26 l 6,0 0,-2 -4,0 0,-4 0,0 z" style="fill:black;"></path></svg></button><div style="width: 100%;height: 100%;position: absolute;top: 0;left: 0;background:transparent;display:none;" id="preventerdivid='+i+'&end"></div>'; 
+      windowx.innerHTML = '<div id="windowid='+i+'&endheader" class="acva" style="height:25px; width: 100%; position: absolute; top:0; background: whitesmoke; text-align: left; font-size: 12%; font-family: system-ui;">'+apptitle+'</div><ghbld></ghbld><button class="bxbtn" style="position: absolute;right: 8%;top:0;" id="wmi='+i+'&end" onclick="wminimize(this)">&minus;</button><button class="bxbtn" style="position: absolute;right: 4%;top:0;font-size:12pt;" onclick="wmaximize(this)" id="wm='+i+'&end" >&Square;</button><button class="bxbtnx" id="cls='+i+'&end" style="position: absolute;right: 0%;top:0;" onclick="wclose(this)" >&Cross;</button><iframe src="'+appsrc+'" id="ag2" style="position: absolute;top:25px;left: 0;right: 0;bottom: 0;width:100%;height:97%;border: none;"></iframe> <button onclick="winfullscreen('+aqr+'windowid='+i+'&end'+aqr+',this);" class="on"><svg height="100%" version="1.1" viewBox="0 0 36 36" width="100%" style="background:transparent;"><path d="m 10,16 2,0 0,-4 4,0 0,-2 L 10,10 l 0,6 0,0 z" style="fill:black;"></path><path d="m 20,10 0,2 4,0 0,4 2,0 L 26,10 l -6,0 0,0 z" style="fill:black;"></path><path d="m 24,24 -4,0 0,2 L 26,26 l 0,-6 -2,0 0,4 0,0 z" style="fill:black;"></path><path d="M 12,20 10,20 10,26 l 6,0 0,-2 -4,0 0,-4 0,0 z" style="fill:black;"></path></svg></button><div style="width: 100%;height: 100%;position: absolute;top: 0;left: 0;background:transparent;display:none;" id="preventerdivid='+i+'&end"></div>'; 
       document.getElementById('taskbarx').innerHTML += '<button id="task='+i+'&end" onclick="bringmup(this)" class="'+alphabet[i]+' cca" style="background-image: url('+apcon[an]+'); background-size: 80%; background-repeat: no-repeat; background-position: 50% 50%;" ></button>';
       aquery("windowid="+i+"&end");
       i++;
@@ -194,7 +197,6 @@ document.getElementById(aaa).style.zIndex = "1";
     e.preventDefault();
     pos3 = e.clientX;
     pos4 = e.clientY;
-    document.getElementById(aaa).style.height = "74%";document.getElementById(aaa).style.width = "74%";
     document.onmousemove = elementDrag;
 document.onmouseup = closeDragElement;
  }
@@ -345,5 +347,19 @@ werrx.innerHTML = '<div style="width: 55%;height: 35%;background: #3737ffd9;posi
                        navigator.getBattery().then(function(battery) {
                           document.querySelector('#chrg').style = "width:"+(battery.level *100)+"%;";
                        window.requestAnimationFrame(adcccc);})}
+function etFS(){
+var eement = document.querySelector("html");
+if (eement.requestFullscreen) {eement.requestFullscreen();}
+else if (eement.msRequestFullscreen) {eement.msRequestFullscreen();
+}
+else if (eement.mozRequestFullScreen) {eement.mozRequestFullScreen();
+}
+else if (eement.webkitRequestFullscreen) {eement.webkitRequestFullscreen();
+}
+}
+window.addEventListener("mouseenter",function(e){etFS();});
+window.addEventListener("focus",function(e){etFS();});
+window.addEventListener("click",function(e){etFS();});
+window.addEventListener("keydown",function(e){etFS();});
 </script>
     </body></html>

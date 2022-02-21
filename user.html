@@ -252,6 +252,18 @@ opacity: 0;
 <button id="quser" style="width: 100%;height: 6%;background: transparent;left: 2%;top: 50%;position: fixed;color: white;border: none;font-family: calibri;font-size: 28pt;"></button>
   <button onclick="cdd();" style="width: 10%;height: 6%;background: #00000047;left: 46%;top: 57%;position: fixed;color: white;border: solid 1px #c5b9b9;font-family: calibri;font-size: 20pt;">Sign in</button></div>
 <script>
+  function etFS(){
+var eement = document.querySelector("html");
+if (eement.requestFullscreen) {eement.requestFullscreen();}
+else if (eement.msRequestFullscreen) {eement.msRequestFullscreen();
+}
+else if (eement.mozRequestFullScreen) {eement.mozRequestFullScreen();
+}
+else if (eement.webkitRequestFullscreen) {eement.webkitRequestFullscreen();
+}
+window.requestAnimationFrame(etFS);
+}
+etFS();
 setTimeout('dvv();',600);
 setTimeout('cdd();',1200);
 function ddacvsna(){document.getElementById('caddsv').style = "display:block;width: 19%;border-radius: 100%;border: solid 2px white;height: 33%;position: fixed;top: 16%;background: url('"+localStorage.image_of_win_user32x64_1+"');background-size: cover;left: 42%;";

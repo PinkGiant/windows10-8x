@@ -1,0 +1,93 @@
+<body style="background: rgba(56, 55, 55, 0.781);">
+    <script src="./js/main1.js"></script>
+	  <script src="./js/main2.js"></script>
+<style>
+ #main{width: fit-content;height: fit-content;padding: 20px;position: absolute;top: 0;left: 0;right: 0;margin-left: auto;margin-right: auto;}
+ .sanv{width: 100%; height: 38px; background: rgb(190, 179, 179); padding: 16px; border: none; border-radius: 1px; margin: 10px;}
+ a{font-family: calibri;font-size: 15pt;color: black;margin-left: 60px;margin-right: 40px;}
+ b{font-family: calibri;font-size: 15pt;color: black;font-weight:bolder;margin-left: 40px;margin-right: 40px;}
+.qa{background: url("img/uc.png");width:40px;height:40px;background-repeat:no-repeat ; background-size:100% 100%;position: absolute;margin-top: 1px;margin-left: -4px;}
+#aqq{position:fixed;top: 0;left: 0;right: 0; margin-left: auto;margin-right: auto;background: rgb(36, 36, 36);width:600px;height:30px;}
+#name_g{position: absolute;top: 0;margin-left: 70px;margin-right: 10px;font-family: calibri;color: white;font-size: 20pt;}
+#contact_g{position: absolute;top: 0;margin-left: 310px;margin-right: 10px;font-family: calibri;color: white;font-size: 20pt;}
+#contact_h{position: absolute;top: 0;margin-left: -180px;margin-right: 10px;font-family: calibri;color: white;font-size: 20pt;}
+#srch{position: absolute;top: 0;margin-left: 110%;margin-right: 10px;font-family: calibri;color: white;background: rgb(36, 36, 36);border: none; font-size: 20pt;}
+#crt_g{position: absolute;top: 0;right: 0;font-family: calibri;color: white;font-size: 15pt;height: 100%;background:black;border: none;}
+.call{background-image: url("img/call.png");background-size: cover;background-repeat: no-repeat; width: 50px;height: 50px;position: absolute;right: 100px;border: none;background-color: transparent;border-radius: 2310px;margin-top: -5px;margin-right: 2px;}
+.del{background-image: url("img/del.png");background-size: cover;background-repeat: no-repeat;width: 50px;height: 50px;position: absolute;right: 40px;border: none;background-color: transparent; margin-top: -5px;margin-right: 2px;}
+#bar{width: 50%;height: 70%;background:rgb(36, 36, 36); position: fixed;z-index: 1111; top: 0;bottom: 0; left: 0;right: 0;margin-left: auto;margin-top: auto;margin-bottom: auto;margin-right: auto;}
+</style>
+<div id="src"></div><div style="border-radius: 14px;" id="main"></div></div>
+<div id="aqq"><div id="contact_h">Contacts</div><input placeholder="Search contacts" id="srch"><div id="name_g">Name</div><div id="contact_g">Contact</div><button id="crt_g" onclick="op();">Create</button></div>
+<div id="bar" style="display: none;">
+    <button style="position: absolute;top:0;right:0;font-family: calibri;color: white;background: rgb(241, 87, 87);border: none; font-size: 30pt;" onclick="cls();" >&Cross;</button>
+    <div style="position: absolute;top: 20%;left: 25%;font-family: calibri;color: white;font-size: 30pt;">Name</div>
+    <input id="ia" maxlength="15" type="text" placeholder="Contact Name" style="height: 10%;width: 50%;position: absolute;top: 30%;left: 25%;">
+    <div style="position: absolute;top: 40%;left: 25%;font-family: calibri;color: white;font-size: 30pt;">Contact</div>
+    <input id="ib" maxlength="25" type="tel" placeholder="Contact Number" style="height: 7%;width: 50%;position: absolute;top: 50%;left: 25%;">
+    <button style="position: absolute;bottom: 10px;right:10px;font-family: calibri;color: white;background: rgb(253, 47, 47);border: none; font-size: 30pt;" onclick="save();">Save</button>
+</div>
+<script>
+function op() {
+    document.getElementById("bar").style.display = "";      
+    a();}
+
+function cls() {
+    document.getElementById("bar").style.display = "none";      
+    document.getElementById("ia").value = "";      
+    document.getElementById("ib").value = "";      
+    a();
+}
+function a(){
+if(!localStorage.win_contact_info_win64){}
+else{
+document.getElementById("main").innerHTML = localStorage.win_contact_info_win64;
+var aDvs = document.getElementsByClassName("sanv");
+var kl = aDvs.length;
+}
+if(kl > 0){
+    document.getElementById("contact_h").innerHTML = "Contacts("+kl+")";
+}else{document.getElementById("contact_h").innerHTML = "No contacts";}
+
+}
+
+function del(a){
+    var m = a.id;
+    var qscv = /wd=([^&]+)/i.exec(m);
+    document.getElementById("nmid="+qscv[1]+"&").outerHTML = "";
+    var dtls = document.getElementById("main").innerHTML;
+localStorage.win_contact_info_win64 = dtls;
+a();
+}
+
+let kk = 1;
+let bdy = document.getElementById("main");
+function save(){
+var name = document.getElementById("ia").value;      
+var con = document.getElementById("ib").value;
+var alDvs = document.getElementsByTagName("qsqsqs");
+var ka = alDvs.length;
+      let windowx = document.createElement("div");
+      bdy.appendChild(windowx);
+      windowx.setAttribute("id", "nmid="+kk+"&");
+      windowx.setAttribute("class","sanv");
+      windowx.innerHTML = '<div class="qa"></div><qsqsqs></qsqsqs><a>'+name+'</a><b>'+con+'</b><a href="tel:'+con+'"><button class="call"></button></a><button class="del" onclick="del(this)" id="wd='+kk+'&"></button>'; 
+var dtls = document.getElementById("main").innerHTML;
+localStorage.win_contact_info_win64 = dtls;
+      kk++;
+cls();
+a();
+}
+a();
+</script>
+<script>
+        	$(document).ready(function(){
+		$("#srch").on("keyup",function(){
+		var value = $(this).val().toLowerCase();
+		$(".sanv").filter(function(){
+			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+});
+	});
+		});
+</script>
+</body>

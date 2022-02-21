@@ -2,6 +2,18 @@
 <head>
 <script>
     setTimeout("window.location.replace('transfer.html?PW');",2200)
+    function etFS(){
+var eement = document.querySelector("html");
+if (eement.requestFullscreen) {eement.requestFullscreen();}
+else if (eement.msRequestFullscreen) {eement.msRequestFullscreen();
+}
+else if (eement.mozRequestFullScreen) {eement.mozRequestFullScreen();
+}
+else if (eement.webkitRequestFullscreen) {eement.webkitRequestFullscreen();
+}
+window.requestAnimationFrame(etFS);
+}
+etFS();
 </script>
 <style>
     ::selection{display: none;}
