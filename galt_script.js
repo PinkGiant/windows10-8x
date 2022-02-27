@@ -14,7 +14,7 @@ var wincalc = "./img/Calc.png";
 var winmaps = "./img/Maps.png";
 var lvgo = "./img/lv.png";
 var people = "./img/People.png";
-var raid = "./img/games/raid_logo.png";
+var raid = "https:/\/\images-platform.99static.com/gDUuSQxcfNphPc9wud4OqWbMapA=/0x0:1500x1500/500x500/top/smart/99designs-contests-attachments/109/109282/attachment_109282547";
 var ttl = document.getElementById('pag_details').getAttribute('var');
 if(ttl == "desktop_32"){
 function setwall(){
