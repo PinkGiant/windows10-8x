@@ -6,28 +6,42 @@
 <body>
         <div style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rebeccapurple;"></div>
        <br><br><br><br><br><br>
-        <div class="wdiv" style="top: 7%;left: 1%; background: url(img/win10.png);background-size: 100% 100%;" onclick='lst("");lstp("img/win10.png");'></div>
-        <div class="wdiv" style="top: 7%;left:34.5%;background: url(img/wallpapers/boris-baldinger_valley-min.webp);background-size: 100% 100%;" onclick='lst("");lstp("img/wallpapers/boris-baldinger_valley-min.webp");'></div>
-        <div class="wdiv" style="top: 7%;left: 68%;background: url(img/wallpapers/coline-beulin_architecture-min.webp);background-size: 100% 100%;" onclick='lst("");lstp("img/wallpapers/coline-beulin_architecture-min.webp");'></div>
-        <div class="wdiv" style="top: 52%;left: 1%;background: url(img/wallpapers/corwin-prescott_canyon-min.webp);background-size: 100% 100%;" onclick='lst("");lstp("img/wallpapers/corwin-prescott_canyon-min.webp");'></div>
-        <div class="wdiv" style="top: 52%;left:34.5%;background: url(img/wallpapers/corwin-prescott_crestone-min.webp);background-size: 100% 100%;"onclick='lst("");lstp("img/wallpapers/corwin-prescott_crestone-min.webp");'></div>
-        <div class="wdiv" style="top: 52%;left: 68%;background: url(img/wallpapers/curt-stump_plant-min.webp);background-size: 100% 100%;" onclick='lst("");lstp("img/wallpapers/curt-stump_plant-min.webp");'></div>
-   
-        <div class="wdiv" style="top: 97%;left: 1%;background: url(img/wallpapers/david-malenfant_boulders.webp);background-size: 100% 100%;" onclick='lst("");lstp("img/wallpapers/david-malenfant_boulders.webp");' ></div>
-        <div class="wdiv" style="top: 97%;left:34.5%;background: url(img/wallpapers/dylan-malval_sea-min.webp);background-size: 100% 100%;"onclick='lst("");lstp("img/wallpapers/dylan-malval_sea-min.webp");'></div>
-        <div class="wdiv" style="top: 97%;left:68%;background: url(img/wallpapers/geran-de-klerk_trees-min.webp);background-size: 100% 100%;"onclick='lst("");lstp("img/wallpapers/geran-de-klerk_trees-min.webp");'></div>
-  
-        <div class="wdiv" style="top: 142%;left: 1%;background: url(img/wallpapers/john-larson_rockwaves-min.webp);background-size: 100% 100%;"onclick='lst("");lstp("img/wallpapers/john-larson_rockwaves-min.webp");'></div>
-        <div class="wdiv" style="top: 142%;left:34.5%;background: url(img/wallpapers/spencer-moore_fern-min.webp);background-size: 100% 100%;"onclick='lst("");lstp("img/wallpapers/spencer-moore_fern-min.webp");'></div>
-        <div class="wdiv" style="top: 142%;left: 68%;background: url(img/wallpapers/spencer-moore_ocean-min.webp);background-size: 100% 100%;"onclick='lst("");lstp("img/wallpapers/spencer-moore_ocean-min.webp");'></div>
-  
+<div id="main"></div>
+<div style="position: fixed;top: 22px;left: 0%;height: 7%; width: 100%;text-align: center;font-family: calibri;font-size: 20px;background-color:transparent;color: white;" onclick=''>
+<button style="position: absolute;left: 0; width: 10%;height:100%;background: red;border: none;border-radius: 40px;font-family: calibri;font-size:63%;" onclick="winwall()">Windows Wallpapers</button>
+<button style="position: absolute;left: 45%;width: 10%;height:100%;background: red;border: none;border-radius: 40px;font-family: calibri;font-size:63%;" onclick="livewall()">Live Wallpapers</button>
+<button style="position: absolute;right:0; width: 10%;height:100%;background: red;border: none;border-radius: 40px;font-family: calibri;font-size:63%;" onclick="bravewall()">Brave Browser Wallpapers</button>
+</div>        
+
         <div style="position: fixed;top:0%;left: 0%;right: 0%;width: 100%;text-align: center;font-family: calibri;font-size: 20px;background-color: rgb(36, 36,36);color: white;">Wallpaper Manager</div>
         <script>
-           function lst(t){
+function bravewall(){
+    var qre = "'";
+    document.getElementById("main").innerHTML = '<div class="wdiv" style="top: 17%;left: 1%; background: url(img/wallpapers/corwin-prescott_beach-min.webp);background-size: 100% 100%;" onclick='+qre+'lstp("img/wallpapers/corwin-prescott_beach-min.webp");'+qre+'></div><div class="wdiv" style="top: 17%;left:34.5%;background: url(img/wallpapers/boris-baldinger_valley-min.webp);background-size: 100% 100%;" onclick='+qre+'lstp("img/wallpapers/boris-baldinger_valley-min.webp");'+qre+'></div><div class="wdiv" style="top: 17%;left: 68%;background: url(img/wallpapers/coline-beulin_architecture-min.webp);background-size: 100% 100%;" onclick='+qre+'lstp("img/wallpapers/coline-beulin_architecture-min.webp");'+qre+'></div><div class="wdiv" style="top: 62%;left: 1%;background: url(img/wallpapers/corwin-prescott_canyon-min.webp);background-size: 100% 100%;" onclick='+qre+'lstp("img/wallpapers/corwin-prescott_canyon-min.webp");'+qre+'></div><div class="wdiv" style="top: 62%;left:34.5%;background: url(img/wallpapers/corwin-prescott_crestone-min.webp);background-size: 100% 100%;"onclick='+qre+'lstp("img/wallpapers/corwin-prescott_crestone-min.webp");'+qre+'></div><div class="wdiv" style="top: 62%;left: 68%;background: url(img/wallpapers/curt-stump_plant-min.webp);background-size: 100% 100%;" onclick='+qre+'lstp("img/wallpapers/curt-stump_plant-min.webp");'+qre+'></div><div class="wdiv" style="top: 107%;left: 1%;background: url(img/wallpapers/david-malenfant_boulders.webp);background-size: 100% 100%;" onclick='+qre+'lstp("img/wallpapers/david-malenfant_boulders.webp");'+qre+' ></div><div class="wdiv" style="top: 107%;left:34.5%;background: url(img/wallpapers/dylan-malval_sea-min.webp);background-size: 100% 100%;"onclick='+qre+'lstp("img/wallpapers/dylan-malval_sea-min.webp");'+qre+'></div>        <div class="wdiv" style="top: 107%;left:68%;background: url(img/wallpapers/geran-de-klerk_trees-min.webp);background-size: 100% 100%;"onclick='+qre+'lstp("img/wallpapers/geran-de-klerk_trees-min.webp");'+qre+'></div><div class="wdiv" style="top: 152%;left: 1%;background: url(img/wallpapers/john-larson_rockwaves-min.webp);background-size: 100% 100%;"onclick='+qre+'lstp("img/wallpapers/john-larson_rockwaves-min.webp");'+qre+'></div><div class="wdiv" style="top: 152%;left:34.5%;background: url(img/wallpapers/spencer-moore_fern-min.webp);background-size: 100% 100%;"onclick='+qre+'lstp("img/wallpapers/spencer-moore_fern-min.webp");'+qre+'></div>        <div class="wdiv" style="top: 152%;left: 68%;background: url(img/wallpapers/spencer-moore_ocean-min.webp);background-size: 100% 100%;"onclick='+qre+'lstp("img/wallpapers/spencer-moore_ocean-min.webp");'+qre+'></div>'
+}
+function winwall(){
+    var qre = "'";
+    document.getElementById("main").innerHTML = '<div class="wdiv" style="top: 17%;left: 1%; background: url(img/win10.jpg);background-size: 100% 100%;" onclick='+qre+'lstp("img/win10.jpg");'+qre+'></div><div class="wdiv" style="top: 17%;left:34.5%;background: url(img/wallpapers/win5.jpg);background-size: 100% 100%;" onclick='+qre+'lstp("img/wallpapers/win5.jpg");'+qre+'></div><div class="wdiv" style="top: 17%;left: 68%;background: url(img/wallpapers/win3.jpg);background-size: 100% 100%;" onclick='+qre+'lstp("img/wallpapers/win3.jpg");'+qre+'></div><div class="wdiv" style="top: 62%;left: 1%;background: url(img/wallpapers/win4.jpg);background-size: 100% 100%;" onclick='+qre+'lstp("img/wallpapers/win4.jpg");'+qre+'></div><div class="wdiv" style="top: 62%;left:34.5%;background: url(img/wallpapers/win2.jpg);background-size: 100% 100%;"onclick='+qre+'lstp("img/wallpapers/win2.jpg");'+qre+'></div><div class="wdiv" style="top: 62%;left: 68%;background: url(img/wallpapers/win6.png);background-size: 100% 100%;" onclick='+qre+'lstp("img/wallpapers/win6.png");'+qre+'></div><div class="wdiv" style="top: 107%;left: 1%;background: url(img/wallpapers/win1.jpg);background-size: 100% 100%;" onclick='+qre+'lstp("img/wallpapers/win1.jpg");'+qre+' ></div><div class="wdiv" style="top: 107%;left:34.5%;background: url(img/wallpapers/win7.jpg);background-size: 100% 100%;"onclick='+qre+'lstp("img/wallpapers/win7.jpg");'+qre+'></div><div class="wdiv" style="top: 107%;left:68%;background: url(img/wallpapers/win8.jpg);background-size: 100% 100%;"onclick='+qre+'lstp("img/wallpapers/win8.jpg");'+qre+'></div><div class="wdiv" style="top: 152%;left: 1%;background: url(img/wallpapers/win9.png);background-size: 100% 100%;"onclick='+qre+'lstp("img/wallpapers/win9.png");'+qre+'></div><div class="wdiv" style="top: 152%;left:34.5%;background: url(img/wallpapers/win11.jpg);background-size: 100% 100%;"onclick='+qre+'lstp("img/wallpapers/win11.jpg");'+qre+'></div><div class="wdiv" style="top: 152%;left: 68%;background: url(img/wallpapers/win12.jpg);background-size: 100% 100%;"onclick='+qre+'lstp("img/wallpapers/win12.jpg");'+qre+'></div>'
+}
+function livewall(){
+    var qre = "'";
+    document.getElementById("main").innerHTML = '<div class="wdiv" style="top: 17%;left: 1%; background: url(img/fld.jpg);background-size: 100% 100%;" onclick='+qre+'f()'+qre+'></div>'
+}
+winwall();
+function lst(t){
                 localStorage.vdolv = t;
+                localStorage.pdolv = "";
+                localStorage.fluidlv = "";
             }
             function lstp(t){
                 localStorage.pdolv = t;
+                localStorage.vdolv = "";
+                localStorage.fluidlv = "";
+            }
+            function f(){
+                localStorage.fluidlv = "fluid";
+                localStorage.pdolv = "";
+                localStorage.vdolv = "";
             }
         </script>   
 
